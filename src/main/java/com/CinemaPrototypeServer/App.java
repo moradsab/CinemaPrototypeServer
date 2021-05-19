@@ -1,13 +1,15 @@
 package com.CinemaPrototypeServer;
 
-/**
- * Hello world!
- *
- */
+import java.io.IOException;
+
+
 public class App 
 {
-    public static void main( String[] args )
+	
+	private static Server server;
+    public static void main( String[] args ) throws IOException
     {
-        System.out.println( "Hello World!" );
+        server = new Server(3000);
+        server.listen();
     }
 }
